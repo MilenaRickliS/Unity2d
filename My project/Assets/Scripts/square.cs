@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class square : MonoBehaviour
+public class square : MonoBehaviour, Itouch
 {
-    // Start is called before the first frame update
-    void Start()
+    void Touch()
     {
+        var SpriteRenderer = GetComponent<SpriteRenderer>();
+        SpriteRenderer.color = SpriteRenderer.color ==Color.blue ? Color.white :Color.blue;
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
